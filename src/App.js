@@ -87,7 +87,7 @@ function App() {
           </div>
         </Route>
         <Route path="/detail/:id">
-          <Detail shoes={shoes} 재고={재고} />
+          <Detail shoes={shoes} 재고={재고} 재고변경={재고변경} />
         </Route>
         <Route path="/:id">
           <div>아무거나~</div>

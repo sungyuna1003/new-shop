@@ -48,7 +48,14 @@ function Detail(props) {
           <p>{props.shoes[id].price}</p>
 
           <Info 재고두번째={props.재고} />
-          <button className="btn btn-danger">주문하기</button>
+          <button
+            className="btn btn-danger"
+            onClick={() => {
+              props.재고변경([9, 10, 12]);
+            }}
+          >
+            주문하기
+          </button>
           <button
             className="btn btn-primary"
             onClick={() => {
