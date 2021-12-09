@@ -46,6 +46,8 @@ function Detail(props) {
           <h4 className="pt-5">상품명: {props.shoes[id].title}</h4>
           <p>상품설명:{props.shoes[id].content}</p>
           <p>{props.shoes[id].price}</p>
+
+          <Info 재고두번째={props.재고} />
           <button className="btn btn-danger">주문하기</button>
           <button
             className="btn btn-primary"
@@ -59,5 +61,8 @@ function Detail(props) {
       </div>
     </div>
   );
+}
+function Info(props) {
+  return <p>재고:{props.재고두번째[0]}</p>;
 }
 export default Detail;
