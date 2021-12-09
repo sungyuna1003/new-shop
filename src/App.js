@@ -6,6 +6,7 @@ import { useState } from "react";
 import Data from "./Data.js";
 import Detail from "./Detail.js";
 import { Link, Route, Switch } from "react-router-dom";
+import axios from "axios";
 
 function App() {
   let [shoes, shoes변경] = useState(Data);
@@ -66,6 +67,22 @@ function App() {
                 return <Card shoes={shoes[i]} i={i} />;
               })}
             </div>
+            <button
+              className="btn btn-warning"
+              onClick={() => {
+                axios
+                  .get("https://codingapple1.github.io/shop/data2.json")
+                  .then((result) => {
+                    console.log(result.data);
+                    shoes변경([...shoes, ...result.data]);
+                  })
+                  .catch(() => {
+                    console.log("fail");
+                  });
+              }}
+            >
+              더보기
+            </button>
           </div>
         </Route>
         <Route path="/detail/:id">
