@@ -1,18 +1,28 @@
 /* eslint-disable */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
 import "./detail.scss";
 
 function Detail(props) {
+  useEffect(() => {
+    let timer = setTimeout(function () {
+      alert변경(false);
+    }, 2000);
+  });
+  let [alert, alert변경] = useState(true);
+
   let history = useHistory(props);
   let { id } = useParams();
   return (
     <div className="container">
-      <div className="my-alert">
-        <p>재고가 얼마 남지 않았습니다.</p>
-      </div>
+      {alert === true ? (
+        <div className="my-alert">
+          <p class="alert">재고가 얼마 남지 않았습니다.</p>
+        </div>
+      ) : null}
+
       <div className="row">
         <div className="col-md-6">
           <img

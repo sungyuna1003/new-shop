@@ -4,7 +4,7 @@ import "./App.css";
 import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
 import { useState } from "react";
 import Data from "./Data.js";
-import Detail from "./components/Detail.js";
+import Detail from "./Detail.js";
 import { Link, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -18,11 +18,11 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link>
-                <Link to="/">Home</Link>
+              <Nav.Link as={Link} to="/">
+                Home
               </Nav.Link>
-              <Nav.Link>
-                <Link to="/detail">Detail</Link>
+              <Nav.Link as={Link} to="/detail">
+                Detail
               </Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
