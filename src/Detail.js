@@ -6,17 +6,29 @@ import styled from "styled-components";
 import "./detail.scss";
 
 function Detail(props) {
+  let [alert, alert변경] = useState(true);
+  let [inputData, inputData변경] = useState("");
+  //실행 한번만 될 때만 나타남
   useEffect(() => {
     let timer = setTimeout(function () {
       alert변경(false);
     }, 2000);
-  });
-  let [alert, alert변경] = useState(true);
+    console.log("ddd");
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   let history = useHistory(props);
   let { id } = useParams();
   return (
     <div className="container">
+      {inputData}
+      <input
+        onChange={(e) => {
+          inputData변경(e.target.value);
+        }}
+      />
       {alert === true ? (
         <div className="my-alert">
           <p class="alert">재고가 얼마 남지 않았습니다.</p>
