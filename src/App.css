@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.background {
+  background-image: url("./images/map.png");
+  background-size: cover;
+  color: #111;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
