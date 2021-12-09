@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
-import "./detail.sass";
+import "./detail.scss";
 
 function Detail(props) {
   let history = useHistory(props);
