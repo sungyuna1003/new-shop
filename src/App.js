@@ -7,7 +7,7 @@ import Data from "./Data.js";
 import Detail from "./components/Detail.js";
 import { Link, Route, Switch } from "react-router-dom";
 import axios from "axios";
-
+import Cart from "./components/Cart";
 export let 재고context = React.createContext();
 
 function App() {
@@ -96,8 +96,11 @@ function App() {
             <Detail shoes={shoes} 재고={재고} 재고변경={재고변경} />
           </재고context.Provider>
         </Route>
-        <Route path="/:id">
+        {/* <Route path="/:id">
           <div>아무거나~</div>
+        </Route> */}
+        <Route path="/Cart">
+          <Cart></Cart>
         </Route>
       </Switch>
     </div>
