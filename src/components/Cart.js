@@ -1,7 +1,8 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import { connect } from "react-redux";
 
-function Cart() {
+function Cart(props) {
   return (
     <div>
       <Table striped bordered hover>
@@ -16,7 +17,7 @@ function Cart() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Mark</td>
+            <td>{props.state[0].name}</td>
             <td>Otto</td>
             <td>@mdo</td>
           </tr>
@@ -25,4 +26,10 @@ function Cart() {
     </div>
   );
 }
-export default Cart;
+function state를props화(state) {
+  return {
+    state: state,
+  };
+}
+export default connect(state를props화)(Cart);
+// export default Cart;
