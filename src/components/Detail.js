@@ -3,8 +3,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import styled from "styled-components";
-import "./detail.scss";
-import { 재고context } from "./App.js";
+import "../detail.scss";
+import { 재고context } from "../App.js";
 import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
 import { CSSTransition } from "react-transition-group";
 function Detail(props) {

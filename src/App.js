@@ -1,10 +1,10 @@
 /* eslint-disable */
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
 import React, { useContext, useState } from "react";
 import Data from "./Data.js";
-import Detail from "./Detail.js";
+import Detail from "./components/Detail.js";
 import { Link, Route, Switch } from "react-router-dom";
 import axios from "axios";
 
